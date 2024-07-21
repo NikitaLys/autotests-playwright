@@ -19,39 +19,3 @@ test.describe("Login test suite", () => {
         await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html')
     })
 })
-
-// CSS Selectors
-// await page.click('button')
-// await page.click('#id')
-// await page.click('.class')
-
-// Only visible CSS Selector
-// await page.click('.class:visible')
-
-// Xpath
-// await page.click('//button')
-
-// To assert NOT existing element
-// NB! To assert varriable must be given
-// var someLocator = await page.locator('someElement')
-// await expect(someLocator).not.toBeVisible()
-
-// Annotations
-// To skip test
-// test.skip("some test")...
-// To run only one or few tests
-// test.only("some test")...
-
-// Tagging
-// To run tagged test
-// npx playwright test --grep @tag
-
-// Test suite
-// test.describe("Test suite",() =>{
-// test("some test")...
-// test("some another test")...
-// }
-// )
-
-// @tags is used to run test by tag
-// npx playwright test @tags
