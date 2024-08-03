@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-var testUrl = 'https://www.saucedemo.com/'
+const testUrl = 'https://www.saucedemo.com/'
 
 
 test.describe("Login test suite", () => {

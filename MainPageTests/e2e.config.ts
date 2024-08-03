@@ -3,15 +3,16 @@ import { PlaywrightTestConfig } from "@playwright/test"
 const config: PlaywrightTestConfig = {
     timeout: 60000,
     retries: 0, //how many times re-run the failed tests
+    testDir: "tests/e2e",
     use: {
         headless: true, //(headful||headless)
         viewport: {
             width: 1280, height: 720
         },
-        actionTimeout: 15000, //timeout for functions (clicks, locators)
+        actionTimeout: 10000, //timeout for functions (clicks, locators)
         ignoreHTTPSErrors: true,
-        video: "retain-on-failure",
-        screenshot: "only-on-failure"
+        video: "off",
+        screenshot: "off"
     },
     projects: [
         {
@@ -35,6 +36,3 @@ const config: PlaywrightTestConfig = {
 }
 
 export default config
-
-// To run test with the specific config and project
-// npx playwright test --config=playwright.config.ts --project=Chromium

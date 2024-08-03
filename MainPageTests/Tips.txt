@@ -45,22 +45,27 @@ e.g. npm run tests:chrome --reporter=html
 // var someLocator = await page.locator('someElement')
 // await expect(someLocator).not.toBeVisible()
 
-// Annotations
+-- Annotations
 // To skip test
 // test.skip("some test")...
 // To run only one or few tests
 // test.only("some test")...
 
-// Tagging
+-- Tagging
 // To run tagged test
 // npx playwright test --grep @tag
 
-// Test suite
+-- Test suite
 // test.describe("Test suite",() =>{
 // test("some test")...
 // test("some another test")...
 // }
 // )
 
-// @tags is used to run test by tag
+-- @tags is used to run test by tag
 // npx playwright test @tags
+
+-- Pause function for debugging
+//...
+// await page.pause()
+//...

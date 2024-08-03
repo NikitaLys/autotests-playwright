@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-var testUrl = 'https://react-shopping-cart-67954.firebaseapp.com/'
+const testUrl = 'https://react-shopping-cart-67954.firebaseapp.com/'
 
 test("Full page screenshot", async ({ page }) => {
     await page.goto(testUrl)
