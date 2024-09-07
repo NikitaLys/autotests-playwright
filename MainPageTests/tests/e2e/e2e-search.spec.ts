@@ -1,20 +1,15 @@
 import { test, expect } from '@playwright/test'
+import { HomePage } from '../../page-objects/HomePage'
 
 test.describe.parallel("Search results", () => {
-    const testUrl = "http://zero.webappsecurity.com/"
-    let searchField
-    let searchBtn
-
+    let homePage: HomePage
     test.beforeEach(async ({ page }) => {
-        page.goto(testUrl)
-        searchField = page.locator("#searchTerm")
+        homePage = new HomePage(page)
+        await homePage.visit()
     })
-
     test("Should find search result", async ({ page }) => {
-        await searchField.fill("bank")
-        await page.keyboard.press('Enter')
-        const numberOfLinks = await page.locator('li > a')
-        await expect(numberOfLinks).toHaveCount(2)
+        await homePage.search("bank")
+        await expect(homePage.searchResultLinks).toHaveCount(2)
     })
 
 })
