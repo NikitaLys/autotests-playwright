@@ -7,7 +7,7 @@ test.describe.parallel("Sort the items", () => {
 
     test.beforeEach(async ({ page }) => {
         loginPage = new LoginPage(page)
-        loginPage.visit()
+        // loginPage.visit()
         loginPage.login("standard_user", "secret_sauce")
         sortSelect = page.locator('.product_sort_container')
     })
